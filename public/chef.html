@@ -1,0 +1,57 @@
+<flowise-fullchatbot></flowise-fullchatbot>
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.initFull({
+        chatflowid: "2d8a7730-2010-41cb-a93b-0b548a5271c5",
+        apiHost: "https://marmot-diverse-mastodon.ngrok-free.app",
+        theme: {
+            chatWindow: {
+                showTitle: true,
+                title: 'Cookbook Agent',
+                titleAvatarSrc: 'https://i.ibb.co/x6Mc2Dg/Screenshot-from-2024-12-06-16-25-52.png',
+                showAgentMessages: true,
+                welcomeMessage: "Hello! Let's Cook",
+                errorMessage: 'This is an error please try again',
+                backgroundColor: "#303235",
+                height: '90vh', // 90% of viewport height,
+                width: '90vw',  // 90% of viewport width,
+                fontSize: 16,
+                poweredByTextColor: "#303235",
+                botMessage: {
+                    backgroundColor: "#303235",
+                    textColor: "#d4af37",
+                    showAvatar: true,
+                    avatarSrc: "https://i.ibb.co/x6Mc2Dg/Screenshot-from-2024-12-06-16-25-52.png",
+                },
+                userMessage: {
+                    backgroundColor: "#303235",
+                    textColor: "#d4af37",
+                    showAvatar: true,
+                    avatarSrc: "https://i.ibb.co/5YYTG7Z/image.png",
+                },
+                textInput: {
+                    placeholder: 'Type your question',
+                    backgroundColor: '#303235',
+                    textColor: '#d4af37',
+                    sendButtonColor: '#3B81F6',
+                    maxChars: 50,
+                    maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
+                    autoFocus: true, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
+                    sendMessageSound: true,
+                    // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
+                    receiveMessageSound: true,
+                    // receiveSoundLocation: "receive_message.mp3", // If this is not used, the default sound effect will be played if receiveSoundMessage is true. 
+                },
+                feedback: {
+                    color: '#303235',
+                },
+                footer: {
+                    textColor: '#303235',
+                    text: 'Powered by',
+                    company: 'Flowise',
+                    companyLink: 'https://flowiseai.com',
+                }
+            }
+        }
+    })
+</script>
